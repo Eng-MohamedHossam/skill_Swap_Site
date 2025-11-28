@@ -3,7 +3,51 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title><?php echo $user['name']; ?> - Profile Page</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="#about">About Us</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html">Login</a>
+      <a href="profile.html">Profile page</a>
+    </nav>
+
+    <!-- Profile Section -->
+    <h1>Profile</h1>
+
+    <!-- Profile Picture -->
+    <img
+      src="<?php echo $user['profile_pic']; ?>"
+      alt="Profile Picture"
+      width="150"
+    />
+
+    <!-- User Info -->
+    <h2><?php echo $user['name']; ?></h2>
+    <p>Username: @<?php echo $user['username']; ?></p>
+    <p><?php echo $user['bio']; ?></p>
+
+    <!-- Skills Offered -->
+    <h3>Skills Offered</h3>
+    <ul>
+      <?php foreach($user['skills_offered'] as $skill): ?>
+      <li><?php echo $skill; ?></li>
+      <?php endforeach; ?>
+    </ul>
+
+    <!-- Skills Wanted -->
+    <h3>Skills Wanted</h3>
+    <ul>
+      <?php foreach($user['skills_wanted'] as $skill): ?>
+      <li><?php echo $skill; ?></li>
+      <?php endforeach; ?>
+    </ul>
+
+    <!-- Message Button -->
+    <button>Send Message</button>
+  </body>
 </html>

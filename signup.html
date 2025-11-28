@@ -3,7 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sign Up - Skill Swap</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="skills.html">Skills</a>
+      <a href="#about">About Us</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html">Login</a>
+    </nav>
+    <h1>Create a Skill Swap Account</h1>
+    <form action="#" method="post">
+      <label for="name">Full Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="password">Password:</label><br />
+      <input type="password" id="password" name="password" required />
+      <span id="togglePassword">👁️</span>
+      <br /><br />
+
+      <label for="Occupation">Occupation:</label>
+      <select name="Occupation" id="Occupation">
+        <option value="Student">Student</option>
+        <option value="Developer">Developer</option>
+        <option value="Graphic Designer">Graphic Designer</option>
+        <option value="Engineer">Engineer</option>
+        <option value="Marketing">Marketing</option>
+      </select>
+
+      <br /><br />
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a></p>
+  </body>
 </html>
