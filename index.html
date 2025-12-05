@@ -8,47 +8,68 @@
       name="description"
       content="A platform to exchange skills and learn from each other."
     />
-    <meta property="og:title" content="Home Page" />
+    <meta property="og:title" content="Skill Swap - Home Page" />
     <meta property="og:type" content="website" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <!-- Header / Navigation -->
     <header>
-      <h1>SkillSwap</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="skills.html">Skills</a>
-        <a href="#about">About Us</a>
-        <a href="signup.html">Sign Up</a>
-        <a href="login.html">Login</a>
-        <a href="profile.html">Profile page</a>
-      </nav>
+      <div class="container header-container">
+        <h1 class="logo">SkillSwap</h1>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
+    <!-- Main Content -->
     <main>
-      <h2>Exchange Skills, Learn Anything.</h2>
-      <h3>
-        Connect with people who can teach what you want — and learn from you
-        too.
-      </h3>
-      <section>
+      <!-- Hero Section -->
+      <section class="hero container">
+        <h2>Exchange Skills, Learn Anything.</h2>
+        <p>
+          Connect with people who can teach what you want — and learn from you
+          too.
+        </p>
+        <a href="signup.html" class="button">Get Started</a>
+      </section>
+
+      <!-- How It Works -->
+      <section class="how-it-works container">
         <h2>How It Works</h2>
         <img
-          width="500"
-          src="https://images.unsplash.com/photo-1762330472502-83efbe1d4478?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="image about creating a profile"
+          src="https://images.unsplash.com/photo-1762330472502-83efbe1d4478?q=80&w=1740&auto=format&fit=crop"
+          alt="Creating a profile"
+          class="responsive-image"
         />
-        <ul>
-          <li>Step 1 — Create a Profile</li>
-          <p>Write your occupation, skills, and what you want to learn.</p>
-          <li>Step 2 — Find Matches</li>
-          <p>Browse people who offer the skill you want.</p>
-          <li>Step 3 — Swap Skills</li>
-          <p>Connect and start learning from each other.</p>
-        </ul>
+        <ol>
+          <li>
+            <strong>Create a Profile:</strong> Write your occupation, skills,
+            and what you want to learn.
+          </li>
+          <li>
+            <strong>Find Matches:</strong> Browse people who offer the skill you
+            want.
+          </li>
+          <li>
+            <strong>Swap Skills:</strong> Connect and start learning from each
+            other.
+          </li>
+        </ol>
       </section>
-      <section>
+
+      <!-- Popular Skills -->
+      <section class="popular-skills container">
         <h2>Popular Skill Categories</h2>
-        <ul>
+        <ul class="skills-list">
           <li>Programming</li>
           <li>Graphic Design</li>
           <li>Languages</li>
@@ -57,19 +78,22 @@
           <li>Photography</li>
         </ul>
       </section>
-      <section>
+
+      <!-- Join Section -->
+      <section class="join-us container">
         <h2>Join Us</h2>
         <p>Ready to share your skills? Join SkillSwap today.</p>
         <img
-          width="500"
-          src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1738&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="join us"
+          src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1738&auto=format&fit=crop"
+          alt="Join SkillSwap"
+          class="responsive-image"
         />
-        <br />
         <a href="signup.html" class="button">Sign Up</a>
       </section>
-      <section>
-        <h2 id="about">About Us</h2>
+
+      <!-- About Section -->
+      <section id="about" class="about-us container">
+        <h2>About Us</h2>
         <p>
           Skill Swap is a platform designed to help people exchange skills in a
           simple and friendly way. Users can list the skills they offer,
@@ -79,5 +103,10 @@
         </p>
       </section>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer container">
+      <p>&copy; 2025 Skill Swap. All rights reserved.</p>
+    </footer>
   </body>
 </html>

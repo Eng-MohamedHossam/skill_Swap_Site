@@ -1,0 +1,286 @@
+/* ------------------ Global Styles ------------------ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #0a0a0a;
+  background-color: #f0f8ff; /* very light cyan background */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ------------------ Header & Navigation ------------------ */
+header {
+  background: linear-gradient(to right, #007bff, #00ffff);
+  color: #fff;
+  padding: 15px 0;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* ------------------ Buttons ------------------ */
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+/* ------------------ Hero Section ------------------ */
+.hero {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #007bff, #00ffff);
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+/* ------------------ Sections ------------------ */
+section {
+  padding: 40px 0;
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+section h2,
+section h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* ------------------ Forms ------------------ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select,
+input[type="search"] {
+  padding: 10px;
+  border: 1px solid #007bff;
+  border-radius: 5px;
+  width: 100%;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #00ffff;
+}
+
+.password-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper button {
+  margin-left: 10px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.password-wrapper button:hover {
+  background: #00ffff;
+  color: #000;
+}
+
+/* ------------------ Profile Page ------------------ */
+.profile-page .profile-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #007bff;
+}
+
+.user-details h2 {
+  color: #007bff;
+  font-size: 1.8rem;
+}
+
+.username {
+  color: #00ced1;
+  font-style: italic;
+}
+
+.skills-offered ul,
+.skills-wanted ul {
+  list-style: square inside;
+  padding-left: 0;
+}
+
+.skills-offered li,
+.skills-wanted li {
+  padding: 5px 0;
+}
+
+/* ------------------ Skills Page ------------------ */
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  background: #e0f7fa;
+  padding: 20px;
+  border-radius: 8px;
+  border-left: 5px solid #007bff;
+}
+
+.skill-card h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.skill-tags .tag {
+  background: #00ffff;
+  color: #000;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+/* ------------------ Footer ------------------ */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #007bff;
+  color: #fff;
+  margin-top: 30px;
+}
+
+/* ------------------ Responsive ------------------ */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .profile-page .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+/* Make all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Specific adjustments */
+
+/* Homepage / section images */
+section img {
+  max-width: 500px; /* limits large hero or content images */
+  margin: 20px auto; /* centers image */
+  display: block;
+  border-radius: 8px; /* optional for nicer look */
+}
+
+/* Profile picture */
+.profile-pic {
+  width: 150px; /* fixed width for profile pics */
+  height: 150px;
+  object-fit: cover; /* crop nicely if image is not square */
+  border-radius: 50%;
+  border: 3px solid #007bff;
+  margin: 0 auto; /* center in small screens */
+}

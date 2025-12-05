@@ -3,51 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo $user['name']; ?> - Profile Page</title>
+    <title><?php echo htmlspecialchars($user['name']); ?> - Profile Page</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Navigation -->
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="#about">About Us</a>
-      <a href="signup.html">Sign Up</a>
-      <a href="login.html">Login</a>
-      <a href="profile.html">Profile page</a>
-    </nav>
+    <!-- Header / Navigation -->
+    <header>
+      <div class="container header-container">
+        <h1 class="logo">SkillSwap</h1>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="profile.php" class="active">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Profile Section -->
-    <h1>Profile</h1>
+    <!-- Main Content -->
+    <main class="container profile-page">
+      <section class="profile-info">
+        <div class="profile-header">
+          <img
+            src="<?php echo htmlspecialchars($user['profile_pic']); ?>"
+            alt="Profile Picture of <?php echo htmlspecialchars($user['name']); ?>"
+            class="profile-pic"
+          />
+          <div class="user-details">
+            <h2><?php echo htmlspecialchars($user['name']); ?></h2>
+            <p class="username">
+              @<?php echo htmlspecialchars($user['username']); ?>
+            </p>
+            <p class="bio"><?php echo htmlspecialchars($user['bio']); ?></p>
+          </div>
+        </div>
 
-    <!-- Profile Picture -->
-    <img
-      src="<?php echo $user['profile_pic']; ?>"
-      alt="Profile Picture"
-      width="150"
-    />
+        <!-- Skills Offered -->
+        <section class="skills-offered">
+          <h3>Skills Offered</h3>
+          <ul>
+            <?php foreach($user['skills_offered'] as $skill): ?>
+            <li><?php echo htmlspecialchars($skill); ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </section>
 
-    <!-- User Info -->
-    <h2><?php echo $user['name']; ?></h2>
-    <p>Username: @<?php echo $user['username']; ?></p>
-    <p><?php echo $user['bio']; ?></p>
+        <!-- Skills Wanted -->
+        <section class="skills-wanted">
+          <h3>Skills Wanted</h3>
+          <ul>
+            <?php foreach($user['skills_wanted'] as $skill): ?>
+            <li><?php echo htmlspecialchars($skill); ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </section>
 
-    <!-- Skills Offered -->
-    <h3>Skills Offered</h3>
-    <ul>
-      <?php foreach($user['skills_offered'] as $skill): ?>
-      <li><?php echo $skill; ?></li>
-      <?php endforeach; ?>
-    </ul>
+        <!-- Message Button -->
+        <div class="message-btn">
+          <button>Send Message</button>
+        </div>
+      </section>
+    </main>
 
-    <!-- Skills Wanted -->
-    <h3>Skills Wanted</h3>
-    <ul>
-      <?php foreach($user['skills_wanted'] as $skill): ?>
-      <li><?php echo $skill; ?></li>
-      <?php endforeach; ?>
-    </ul>
-
-    <!-- Message Button -->
-    <button>Send Message</button>
+    <!-- Footer -->
+    <footer class="footer container">
+      <p>&copy; 2025 Skill Swap. All rights reserved.</p>
+    </footer>
   </body>
 </html>

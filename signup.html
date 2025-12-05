@@ -4,41 +4,112 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign Up - Skill Swap</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="skills.html">Skills</a>
-      <a href="#about">About Us</a>
-      <a href="signup.html">Sign Up</a>
-      <a href="login.html">Login</a>
-    </nav>
-    <h1>Create a Skill Swap Account</h1>
-    <form action="#" method="post">
-      <label for="name">Full Name:</label><br />
-      <input type="text" id="name" name="name" required /><br /><br />
+    <!-- Header / Navigation -->
+    <header>
+      <div class="container header-container">
+        <h1 class="logo">SkillSwap</h1>
+        <nav>
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="signup.html" class="active">Sign Up</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required /><br /><br />
+    <!-- Main Content -->
+    <main class="container signup-page">
+      <section class="signup-section">
+        <h2>Create a Skill Swap Account</h2>
+        <form action="#" method="post" class="signup-form">
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="name">Full Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="Your full name"
+            />
+          </div>
 
-      <label for="password">Password:</label><br />
-      <input type="password" id="password" name="password" required />
-      <span id="togglePassword">👁️</span>
-      <br /><br />
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="you@example.com"
+            />
+          </div>
 
-      <label for="Occupation">Occupation:</label>
-      <select name="Occupation" id="Occupation">
-        <option value="Student">Student</option>
-        <option value="Developer">Developer</option>
-        <option value="Graphic Designer">Graphic Designer</option>
-        <option value="Engineer">Engineer</option>
-        <option value="Marketing">Marketing</option>
-      </select>
+          <!-- Password -->
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                required
+                placeholder="Enter your password"
+              />
+              <button
+                type="button"
+                id="togglePassword"
+                aria-label="Show or hide password"
+              >
+                👁️
+              </button>
+            </div>
+          </div>
 
-      <br /><br />
+          <!-- Occupation -->
+          <div class="form-group">
+            <label for="occupation">Occupation:</label>
+            <select name="occupation" id="occupation">
+              <option value="Student">Student</option>
+              <option value="Developer">Developer</option>
+              <option value="Graphic Designer">Graphic Designer</option>
+              <option value="Engineer">Engineer</option>
+              <option value="Marketing">Marketing</option>
+            </select>
+          </div>
 
-      <button type="submit">Sign Up</button>
-    </form>
-    <p>Already have an account? <a href="login.html">Login here</a></p>
+          <!-- Submit Button -->
+          <button type="submit" class="button">Sign Up</button>
+        </form>
+
+        <p class="login-link">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container">
+      <p>&copy; 2025 Skill Swap. All rights reserved.</p>
+    </footer>
+
+    <!-- password toggle -->
+    <script>
+      const togglePassword = document.getElementById("togglePassword");
+      const password = document.getElementById("password");
+
+      togglePassword.addEventListener("click", () => {
+        const type =
+          password.getAttribute("type") === "password" ? "text" : "password";
+        password.setAttribute("type", type);
+        togglePassword.textContent = type === "password" ? "👁️" : "🙈";
+      });
+    </script>
   </body>
 </html>
