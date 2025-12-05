@@ -265,22 +265,20 @@ img {
   display: block;
 }
 
-/* Specific adjustments */
-
 /* Homepage / section images */
 section img {
-  max-width: 500px; /* limits large hero or content images */
-  margin: 20px auto; /* centers image */
+  max-width: 500px;
+  margin: 20px auto;
   display: block;
-  border-radius: 8px; /* optional for nicer look */
+  border-radius: 8px;
 }
 
 /* Profile picture */
 .profile-pic {
-  width: 150px; /* fixed width for profile pics */
+  width: 150px;
   height: 150px;
-  object-fit: cover; /* crop nicely if image is not square */
+  object-fit: cover;
   border-radius: 50%;
   border: 3px solid #007bff;
-  margin: 0 auto; /* center in small screens */
+  margin: 0 auto;
 }
