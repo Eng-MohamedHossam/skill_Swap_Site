@@ -1,73 +1,393 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skills - Skill Swap</title>
+    <title>Browse Skills – SkillSwap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Header / Navigation -->
-    <header>
-      <div class="container header-container">
-        <h1 class="logo">SkillSwap</h1>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html" class="active">Skills</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="profile.html">Profile</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div class="page-wrapper">
+      <header class="site-header">
+        <div class="container navbar">
+          <a href="index.html" class="brand">
+            <div class="brand-logo">SS</div>
+            <span>SkillSwap</span>
+          </a>
 
-    <!-- Main Content -->
-    <main class="container skills-page">
-      <section class="skills-intro">
-        <h2>Available Skills</h2>
-        <p>
-          Browse and discover the skills our community offers. Find someone who
-          can teach you — or offer your own skill.
-        </p>
-      </section>
+          <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="skills.html" class="active">Skills</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html">Profile</a>
+          </nav>
 
-      <!-- Search Form -->
-      <section class="skills-search">
-        <form action="#" method="get" class="search-form">
-          <input
-            type="search"
-            name="search"
-            placeholder="Search for skills..."
-            aria-label="Search for skills"
-          />
-          <button type="submit" class="button">🔍</button>
-        </form>
-      </section>
-
-      <!-- Skills List (Dynamic content placeholder) -->
-      <section class="skills-list">
-        <!-- Example skill cards (can be generated dynamically with JS or PHP) -->
-        <div class="skill-card">
-          <h3>Programming</h3>
-          <p>
-            Learn or teach coding languages like Python, JavaScript, or C++.
-          </p>
+          <div class="nav-auth">
+            <a href="login.html" class="btn-link outline">Login</a>
+            <a href="signup.html" class="btn-link solid">Join Free</a>
+          </div>
         </div>
-        <div class="skill-card">
-          <h3>Graphic Design</h3>
-          <p>
-            Offer or learn skills in Photoshop, Illustrator, and digital art.
-          </p>
-        </div>
-        <!-- Add more skill cards dynamically -->
-      </section>
-    </main>
+      </header>
 
-    <!-- Footer -->
-    <footer class="footer container">
-      <p>&copy; 2025 Skill Swap. All rights reserved.</p>
-    </footer>
+      <main class="main-content">
+        <div class="container">
+          <section class="section">
+            <div class="section-header">
+              <div>
+                <h1 class="section-title">All skills</h1>
+                <p class="section-subtitle">
+                  Browse skills offered by the SkillSwap community and request
+                  the ones you want to learn.
+                </p>
+              </div>
+              <!-- Placeholder: filters/sorting to be implemented with PHP/JS later -->
+            </div>
+
+            <!-- Simple search / filter (static for now) -->
+            <div class="card" style="margin-bottom: 1.25rem">
+              <form>
+                <div
+                  style="
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.75rem;
+                    align-items: center;
+                  "
+                >
+                  <div style="flex: 1 1 200px">
+                    <label
+                      for="search"
+                      class="form-label"
+                      style="margin-bottom: 0.2rem"
+                    >
+                      Search skills
+                    </label>
+                    <input
+                      type="text"
+                      id="search"
+                      name="q"
+                      class="form-input"
+                      placeholder="Search by skill name or keyword"
+                    />
+                  </div>
+                  <div style="flex: 0 0 160px">
+                    <label
+                      for="level-filter"
+                      class="form-label"
+                      style="margin-bottom: 0.2rem"
+                    >
+                      Level
+                    </label>
+                    <select id="level-filter" name="level" class="form-select">
+                      <option value="">Any</option>
+                      <option value="beginner">Beginner</option>
+                      <option value="intermediate">Intermediate</option>
+                      <option value="expert">Expert</option>
+                    </select>
+                  </div>
+                  <div style="flex: 0 0 auto; align-self: flex-end">
+                    <button type="submit" class="btn btn-outline">Apply</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+
+            <!-- Skills listing -->
+            <div class="skills-grid">
+              <!-- NOTE:
+               These are static example cards.
+               Later you can loop over skills from the database with PHP.
+          -->
+
+              <!-- Web / Tech -->
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Beginner Guitar Lessons</h2>
+                  <span class="skill-level beginner">Beginner</span>
+                </div>
+                <p class="skill-description">
+                  Learn chords, strumming patterns, and your first songs on
+                  acoustic guitar.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Chris Martin</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Graphic Design with Figma</h2>
+                  <span class="skill-level intermediate">Intermediate</span>
+                </div>
+                <p class="skill-description">
+                  Learn how to design modern user interfaces, components, and
+                  prototypes using Figma.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Aisha Khan</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Advanced Python Programming</h2>
+                  <span class="skill-level expert">Expert</span>
+                </div>
+                <p class="skill-description">
+                  Deep dive into generators, decorators, async programming, and
+                  best practices for large Python projects.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Linh Tran</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">HTML &amp; CSS from Scratch</h2>
+                  <span class="skill-level beginner">Beginner</span>
+                </div>
+                <p class="skill-description">
+                  Build your first responsive web pages using semantic HTML and
+                  modern Flexbox/Grid layouts.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">John Doe</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">React Basics</h2>
+                  <span class="skill-level intermediate">Intermediate</span>
+                </div>
+                <p class="skill-description">
+                  Learn components, props, state, and hooks to build interactive
+                  front-end applications.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Emily Carter</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Node.js &amp; Express APIs</h2>
+                  <span class="skill-level intermediate">Intermediate</span>
+                </div>
+                <p class="skill-description">
+                  Learn how to build REST APIs with Express, handle routing, and
+                  connect to databases.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Carlos Rivera</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <!-- Language / Communication -->
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Conversational Spanish</h2>
+                  <span class="skill-level beginner">Beginner</span>
+                </div>
+                <p class="skill-description">
+                  Practice everyday Spanish phrases, pronunciation, and simple
+                  conversations.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Lucia Gomez</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Public Speaking Coaching</h2>
+                  <span class="skill-level intermediate">Intermediate</span>
+                </div>
+                <p class="skill-description">
+                  Improve your stage presence, structure your talks, and control
+                  nerves in front of an audience.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Michael Brown</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <!-- Creative / Hobbies -->
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Watercolor Painting Basics</h2>
+                  <span class="skill-level beginner">Beginner</span>
+                </div>
+                <p class="skill-description">
+                  Learn washes, blending, and simple compositions to create your
+                  first watercolor artworks.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Sofia Rossi</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Portrait Photography</h2>
+                  <span class="skill-level intermediate">Intermediate</span>
+                </div>
+                <p class="skill-description">
+                  Master natural light, posing, and composition to capture
+                  better portraits indoors and outdoors.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">David Kim</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Music Production with Ableton Live</h2>
+                  <span class="skill-level expert">Expert</span>
+                </div>
+                <p class="skill-description">
+                  Learn sound design, mixing, and arrangement to produce
+                  complete tracks in Ableton Live.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Noah Smith</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <!-- Productivity / Career -->
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Resume &amp; LinkedIn Review</h2>
+                  <span class="skill-level intermediate">Intermediate</span>
+                </div>
+                <p class="skill-description">
+                  Get personalized feedback on your resume and LinkedIn to
+                  improve your job search results.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Olivia Green</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Time Management &amp; Productivity</h2>
+                  <span class="skill-level beginner">Beginner</span>
+                </div>
+                <p class="skill-description">
+                  Learn simple systems (time blocking, task batching, and
+                  priorities) to organize your day.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Raj Patel</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+
+              <!-- Health / Lifestyle -->
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h2 class="skill-name">Yoga for Beginners</h2>
+                  <span class="skill-level beginner">Beginner</span>
+                </div>
+                <p class="skill-description">
+                  Gentle yoga sequences to improve flexibility and reduce
+                  stress. No prior experience needed.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Owner:
+                    <a href="profile.html">Hannah Lee</a>
+                  </div>
+                  <a href="login.html" class="btn btn-primary"
+                    >Request this Skill</a
+                  >
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

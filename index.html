@@ -1,112 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Skill Swap</title>
-    <meta
-      name="description"
-      content="A platform to exchange skills and learn from each other."
-    />
-    <meta property="og:title" content="Skill Swap - Home Page" />
-    <meta property="og:type" content="website" />
+    <title>SkillSwap – Trade Skills, Learn Together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Header / Navigation -->
-    <header>
-      <div class="container header-container">
-        <h1 class="logo">SkillSwap</h1>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="profile.html">Profile</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div class="page-wrapper">
+      <header class="site-header">
+        <div class="container navbar">
+          <a href="index.html" class="brand">
+            <div class="brand-logo">SS</div>
+            <span>SkillSwap</span>
+          </a>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section class="hero container">
-        <h2>Exchange Skills, Learn Anything.</h2>
-        <p>
-          Connect with people who can teach what you want — and learn from you
-          too.
-        </p>
-        <a href="signup.html" class="button">Get Started</a>
-      </section>
+          <nav class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <!-- Placeholder: Show Profile only when user is logged in -->
+            <a href="profile.html">Profile</a>
+          </nav>
 
-      <!-- How It Works -->
-      <section class="how-it-works container">
-        <h2>How It Works</h2>
-        <img
-          src="https://images.unsplash.com/photo-1762330472502-83efbe1d4478?q=80&w=1740&auto=format&fit=crop"
-          alt="Creating a profile"
-          class="responsive-image"
-        />
-        <ol>
-          <li>
-            <strong>Create a Profile:</strong> Write your occupation, skills,
-            and what you want to learn.
-          </li>
-          <li>
-            <strong>Find Matches:</strong> Browse people who offer the skill you
-            want.
-          </li>
-          <li>
-            <strong>Swap Skills:</strong> Connect and start learning from each
-            other.
-          </li>
-        </ol>
-      </section>
+          <div class="nav-auth">
+            <!-- Placeholder: replace with PHP condition for logged in/out -->
+            <a href="login.html" class="btn-link outline">Login</a>
+            <a href="signup.html" class="btn-link solid">Join Free</a>
+          </div>
+        </div>
+      </header>
 
-      <!-- Popular Skills -->
-      <section class="popular-skills container">
-        <h2>Popular Skill Categories</h2>
-        <ul class="skills-list">
-          <li>Programming</li>
-          <li>Graphic Design</li>
-          <li>Languages</li>
-          <li>Music</li>
-          <li>Marketing</li>
-          <li>Photography</li>
-        </ul>
-      </section>
+      <main class="main-content">
+        <div class="container">
+          <section class="hero">
+            <div>
+              <p class="hero-tag">Learn. Teach. Grow.</p>
+              <h1 class="hero-title">
+                Swap your <span class="hero-highlight">skills</span>, not your
+                money.
+              </h1>
+              <p class="hero-subtitle">
+                SkillSwap connects people who want to learn with people who love
+                to teach. Offer what you know and request what you want to learn
+                in return.
+              </p>
 
-      <!-- Join Section -->
-      <section class="join-us container">
-        <h2>Join Us</h2>
-        <p>Ready to share your skills? Join SkillSwap today.</p>
-        <img
-          src="https://images.unsplash.com/photo-1455849318743-b2233052fcff?q=80&w=1738&auto=format&fit=crop"
-          alt="Join SkillSwap"
-          class="responsive-image"
-        />
-        <a href="signup.html" class="button">Sign Up</a>
-      </section>
+              <div class="hero-actions">
+                <a href="signup.html" class="btn btn-primary">Get Started</a>
+                <a href="skills.html" class="btn btn-outline">Browse Skills</a>
+              </div>
 
-      <!-- About Section -->
-      <section id="about" class="about-us container">
-        <h2>About Us</h2>
-        <p>
-          Skill Swap is a platform designed to help people exchange skills in a
-          simple and friendly way. Users can list the skills they offer,
-          discover others who match their learning goals, and connect to teach
-          or learn. Our mission is to make learning accessible, collaborative,
-          and based on mutual support.
-        </p>
-      </section>
-    </main>
+              <div class="hero-meta">
+                <!-- Placeholders for dynamic stats -->
+                <span class="hero-meta-item">
+                  <strong><!-- PHP: total users -->1,240+</strong> learners
+                </span>
+                <span class="hero-meta-item">
+                  <strong><!-- PHP: total skills -->320+</strong> skills shared
+                </span>
+                <span class="hero-meta-item">
+                  <strong><!-- PHP: exchanges completed -->890+</strong> swaps
+                </span>
+              </div>
+            </div>
 
-    <!-- Footer -->
-    <footer class="footer container">
-      <p>&copy; 2025 Skill Swap. All rights reserved.</p>
-    </footer>
+            <aside class="hero-visual" aria-hidden="true">
+              <div>
+                <p class="hero-tag">Popular right now</p>
+                <div class="hero-skill-badges">
+                  <span class="hero-skill-badge">Web Development</span>
+                  <span class="hero-skill-badge">Graphic Design</span>
+                  <span class="hero-skill-badge">Guitar</span>
+                  <span class="hero-skill-badge">Public Speaking</span>
+                  <span class="hero-skill-badge">Photography</span>
+                </div>
+              </div>
+              <div>
+                <p class="hero-tag">How it works</p>
+                <p class="text-muted" style="font-size: 0.9rem; margin: 0">
+                  1. Create a profile and list your skills.<br />
+                  2. Browse what others offer and request a swap.<br />
+                  3. Learn together through online or in‑person sessions.
+                </p>
+              </div>
+            </aside>
+          </section>
+
+          <section class="section">
+            <div class="section-header">
+              <h2 class="section-title">Featured Skills</h2>
+              <p class="section-subtitle">
+                <!-- Placeholder: dynamically show total count -->
+                A glimpse of what people are teaching on SkillSwap.
+              </p>
+            </div>
+
+            <div class="skills-grid">
+              <!-- Example static cards – replace loop with PHP later -->
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h3 class="skill-name">JavaScript for Beginners</h3>
+                  <span class="skill-level beginner">Beginner</span>
+                </div>
+                <p class="skill-description">
+                  Learn the basics of JavaScript: variables, functions, and DOM
+                  manipulation.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    <!-- Placeholder: user profile link -->
+                    Offered by <a href="profile.html">Alex Johnson</a>
+                  </div>
+                  <a href="login.html" class="btn btn-outline">Request Skill</a>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h3 class="skill-name">Portrait Photography</h3>
+                  <span class="skill-level intermediate">Intermediate</span>
+                </div>
+                <p class="skill-description">
+                  Improve composition, lighting, and posing to take better
+                  portraits.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Offered by <a href="profile.html">Maria Lee</a>
+                  </div>
+                  <a href="login.html" class="btn btn-outline">Request Skill</a>
+                </div>
+              </article>
+
+              <article class="skill-card">
+                <div class="skill-header">
+                  <h3 class="skill-name">Advanced Excel Dashboards</h3>
+                  <span class="skill-level expert">Expert</span>
+                </div>
+                <p class="skill-description">
+                  Build interactive dashboards with pivot tables, charts, and
+                  formulas.
+                </p>
+                <div class="skill-footer">
+                  <div class="skill-owner">
+                    Offered by <a href="profile.html">Sam Patel</a>
+                  </div>
+                  <a href="login.html" class="btn btn-outline">Request Skill</a>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container">
+          <!-- Placeholder: current year via PHP -->
+          &copy;
+          <!-- <?php echo date('Y'); ?> -->
+          SkillSwap. Trade knowledge, not cash.
+        </div>
+      </footer>
+    </div>
   </body>
 </html>

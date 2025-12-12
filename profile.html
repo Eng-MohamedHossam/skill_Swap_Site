@@ -1,76 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><?php echo htmlspecialchars($user['name']); ?> - Profile Page</title>
+    <title>User Profile – SkillSwap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Header / Navigation -->
-    <header>
-      <div class="container header-container">
-        <h1 class="logo">SkillSwap</h1>
-        <nav>
-          <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="skills.html">Skills</a></li>
-            <li><a href="signup.html">Sign Up</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="profile.php" class="active">Profile</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div class="page-wrapper">
+      <header class="site-header">
+        <div class="container navbar">
+          <a href="index.html" class="brand">
+            <div class="brand-logo">SS</div>
+            <span>SkillSwap</span>
+          </a>
 
-    <!-- Main Content -->
-    <main class="container profile-page">
-      <section class="profile-info">
-        <div class="profile-header">
-          <img
-            src="<?php echo htmlspecialchars($user['profile_pic']); ?>"
-            alt="Profile Picture of <?php echo htmlspecialchars($user['name']); ?>"
-            class="profile-pic"
-          />
-          <div class="user-details">
-            <h2><?php echo htmlspecialchars($user['name']); ?></h2>
-            <p class="username">
-              @<?php echo htmlspecialchars($user['username']); ?>
-            </p>
-            <p class="bio"><?php echo htmlspecialchars($user['bio']); ?></p>
+          <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="skills.html">Skills</a>
+            <a href="signup.html">Sign Up</a>
+            <a href="login.html">Login</a>
+            <a href="profile.html" class="active">Profile</a>
+          </nav>
+
+          <div class="nav-auth">
+            <!-- Placeholder: show different buttons when user is logged in -->
+            <a href="login.html" class="btn-link outline">Login</a>
           </div>
         </div>
+      </header>
 
-        <!-- Skills Offered -->
-        <section class="skills-offered">
-          <h3>Skills Offered</h3>
-          <ul>
-            <?php foreach($user['skills_offered'] as $skill): ?>
-            <li><?php echo htmlspecialchars($skill); ?></li>
-            <?php endforeach; ?>
-          </ul>
-        </section>
+      <main class="main-content">
+        <div class="container">
+          <section class="section">
+            <div class="section-header">
+              <h1 class="section-title">Profile</h1>
+              <p class="section-subtitle">
+                <!-- Placeholder: show username dynamically -->
+                Public view of this SkillSwap member.
+              </p>
+            </div>
 
-        <!-- Skills Wanted -->
-        <section class="skills-wanted">
-          <h3>Skills Wanted</h3>
-          <ul>
-            <?php foreach($user['skills_wanted'] as $skill): ?>
-            <li><?php echo htmlspecialchars($skill); ?></li>
-            <?php endforeach; ?>
-          </ul>
-        </section>
+            <div class="profile-layout">
+              <!-- Sidebar: user basic info -->
+              <aside class="profile-sidebar">
+                <div class="profile-header">
+                  <div class="profile-avatar"></div>
+                  <div class="profile-meta">
+                    <div class="profile-name">
+                      <!-- Placeholder: user full name -->
+                      Ahmed Adel
+                    </div>
+                    <div class="profile-username">
+                      <!-- Placeholder: username -->
+                      @AhmedAdel
+                    </div>
+                    <div class="profile-occupation">
+                      <!-- Placeholder: occupation -->
+                      Web Developer · Egypt, Cairo
+                    </div>
+                  </div>
+                </div>
 
-        <!-- Message Button -->
-        <div class="message-btn">
-          <button>Send Message</button>
+                <p class="profile-bio">
+                  <!-- Placeholder: user bio -->
+                  I love helping people learn web development, from HTML &amp;
+                  CSS basics to modern JavaScript frameworks.
+                </p>
+
+                <div class="profile-actions">
+                  <!-- Button to send a message to this user -->
+                  <button
+                    type="button"
+                    class="btn btn-primary"
+                    style="width: 100%"
+                  >
+                    Send Message
+                  </button>
+                  <div class="message-box">
+                    <!-- Placeholder: link or modal trigger for messaging -->
+                    This will open a message form so you can propose a skill
+                    swap.
+                  </div>
+                </div>
+              </aside>
+
+              <!-- Main content: offered and wanted skills -->
+              <div class="profile-main">
+                <section class="profile-section">
+                  <div class="profile-section-header">
+                    <h2 class="profile-section-title">Offered skills</h2>
+                    <p class="profile-section-subtitle">
+                      <!-- Placeholder: dynamic count -->
+                      Skills this user can teach.
+                    </p>
+                  </div>
+
+                  <div class="profile-skills-list">
+                    <!-- Example static entries – replace with PHP loop -->
+                    <article class="skill-card">
+                      <div class="skill-header">
+                        <h3 class="skill-name">HTML &amp; CSS Fundamentals</h3>
+                        <span class="skill-level beginner">Beginner</span>
+                      </div>
+                      <p class="skill-description">
+                        Learn to build clean, responsive websites with semantic
+                        HTML and modern CSS.
+                      </p>
+                    </article>
+
+                    <article class="skill-card">
+                      <div class="skill-header">
+                        <h3 class="skill-name">React Basics</h3>
+                        <span class="skill-level intermediate"
+                          >Intermediate</span
+                        >
+                      </div>
+                      <p class="skill-description">
+                        Get started with components, props, state, and hooks to
+                        build interactive UIs.
+                      </p>
+                    </article>
+                  </div>
+                </section>
+
+                <section class="profile-section">
+                  <div class="profile-section-header">
+                    <h2 class="profile-section-title">Wanted skills</h2>
+                    <p class="profile-section-subtitle">
+                      Skills this user would like to learn. (Optional)
+                    </p>
+                  </div>
+
+                  <!-- Placeholder: If no wanted skills, show a message -->
+                  <div class="profile-skills-list">
+                    <!-- Example static "wanted" skills – replace with PHP loop -->
+                    <article class="skill-card">
+                      <div class="skill-header">
+                        <h3 class="skill-name">UI/UX Design</h3>
+                        <span class="skill-level beginner">Beginner</span>
+                      </div>
+                      <p class="skill-description">
+                        I want to learn how to design intuitive interfaces and
+                        create wireframes.
+                      </p>
+                    </article>
+
+                    <article class="skill-card">
+                      <div class="skill-header">
+                        <h3 class="skill-name">Public Speaking</h3>
+                        <span class="skill-level intermediate"
+                          >Intermediate</span
+                        >
+                      </div>
+                      <p class="skill-description">
+                        I am looking to improve my presentation and storytelling
+                        skills.
+                      </p>
+                    </article>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
-    </main>
+      </main>
 
-    <!-- Footer -->
-    <footer class="footer container">
-      <p>&copy; 2025 Skill Swap. All rights reserved.</p>
-    </footer>
+      <footer class="site-footer">
+        <div class="container">&copy; SkillSwap.</div>
+      </footer>
+    </div>
   </body>
 </html>
